@@ -9,17 +9,19 @@ import {
   TouchableWithoutFeedback,
   TouchableOpacity,
   TouchableNativeFeedback,
+  Button,
+  Alert,
 } from "react-native";
 
 export default function App() {
   const handlePress = () => console.log("Button Pressed");
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.texts} onPress={handlePress}>
+      {/* <Text style={styles.texts} onPress={handlePress}>
         Hello World !
-      </Text>
+      </Text> */}
       {/* Touchables Starts */}
-      <TouchableWithoutFeedback onPress={() => console.log("Image Tapped")}>
+      {/* <TouchableWithoutFeedback onPress={() => console.log("Image Tapped")}>
         <Image style={styles.img} source={require("./assets/icon.png")} />
       </TouchableWithoutFeedback>
       <TouchableOpacity onPress={() => console.log("Image Tapped")}>
@@ -32,8 +34,34 @@ export default function App() {
         <View
           style={{ width: 100, height: 70, backgroundColor: "tomato" }}
         ></View>
-      </TouchableNativeFeedback>
+      </TouchableNativeFeedback> */}
       {/* Touchables Ends */}
+
+      <Button
+        title="Click Me"
+        color="orange"
+        onPress={() => {
+          Alert.alert("Message", "You're Awesome !", [
+            {
+              text: "Yes",
+              onPress: () => {
+                console.log("Its Yes");
+              },
+            },
+            {
+              text: "Yeah!",
+              onPress: () => {
+                console.log("Its a Yeah!");
+              },
+            },
+          ]);
+        }}
+      />
+      <Button
+        title="Click Me"
+        color="orange"
+        onPress={() => Alert.prompt("Hi", "hello", (text) => console.log(text))}
+      />
     </SafeAreaView>
   );
 }
