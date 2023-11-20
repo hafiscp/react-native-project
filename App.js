@@ -8,18 +8,22 @@ import {
   View,
   Dimensions,
 } from "react-native";
+import {
+  useDimensions,
+  useDeviceOrientation,
+} from "@react-native-community/hooks";
 
 export default function App() {
-  console.log(Dimensions.get("window"));
-  console.log(Dimensions.get("screem"));
-  // Dimensions returns the dimensions of screen or window. It has the width, height, and scale factor of the device.
+  console.log(useDimensions);
+  const { landscape } = useDeviceOrientation();
+
   return (
     <SafeAreaView style={styles.container}>
       <View
         style={{
-          backgroundColor: "dodgerBlue",
-          width: "50%",
-          height: 70,
+          backgroundColor: "Blue",
+          width: "100%",
+          height: landscape ? "100%" : "30%",
         }}
       ></View>
     </SafeAreaView>
@@ -29,7 +33,5 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "black",
-    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
 });
