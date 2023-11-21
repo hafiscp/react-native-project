@@ -19,7 +19,9 @@ export default function App() {
       style={{
         backgroundColor: "#fff",
         flex: 1,
-        flexDirection: "row",
+        flexDirection: "row", // Horizontal
+        justifyContent: "center", // Main - Primary Axis
+        alignItems: "center", // Secondary Axis
       }}
     >
       <View
@@ -33,14 +35,16 @@ export default function App() {
         style={{
           backgroundColor: "gold",
           width: 100,
-          height: 100,
+          height: 200,
+          alignSelf: "flex-end",
         }}
       />
       <View
         style={{
           backgroundColor: "tomato",
           width: 100,
-          height: 100,
+          height: 150,
+          alignSelf: "flex-start",
         }}
       />
     </View>
