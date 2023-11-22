@@ -22,6 +22,8 @@ export default function App() {
         flexDirection: "row", // Horizontal
         justifyContent: "center", // Main - Primary Axis
         alignItems: "center", // Secondary Axis
+        alignContent: "center", // Entire Content
+        flexWrap: "wrap",
       }}
     >
       <View
@@ -35,16 +37,28 @@ export default function App() {
         style={{
           backgroundColor: "gold",
           width: 100,
-          height: 200,
-          alignSelf: "flex-end",
+          height: 100,
         }}
       />
       <View
         style={{
           backgroundColor: "tomato",
           width: 100,
-          height: 150,
-          alignSelf: "flex-start",
+          height: 100,
+        }}
+      />
+      <View
+        style={{
+          backgroundColor: "greenyellow",
+          width: 100,
+          height: 100,
+        }}
+      />
+      <View
+        style={{
+          backgroundColor: "aqua",
+          width: 100,
+          height: 100,
         }}
       />
     </View>
