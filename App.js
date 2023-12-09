@@ -4,6 +4,7 @@ import WelcomeScreen from "./app/screens/WelcomeScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import BorderScreen from "./app/screens/BorderScreen";
 import AppText from "./app/screens/AppText";
+import IconImport from "./app/screens/IconImport";
 
 export default function App() {
   return (
@@ -11,5 +12,6 @@ export default function App() {
     // <ViewImageScreen />
     // <BorderScreen />
     <AppText />
+    // <IconImport />
   );
 }
