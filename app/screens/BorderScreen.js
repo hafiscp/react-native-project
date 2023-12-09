@@ -1,11 +1,18 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import colors from "../config/colors";
 
 function BorderScreen(props) {
   return (
+    // <View style={styles.container}>
+    //   <View style={styles.borders}></View>
+    // </View>
     <View style={styles.container}>
-      <View style={styles.borders}></View>
+      <Text style={styles.textstyles}>
+        I love react native ! And, This is my first app made in complete react
+        native. As a beginner, I've a lot of enthusiasm and eager to try and
+        learn how to build and succeed in developing such skill.
+      </Text>
     </View>
   );
 }
@@ -25,6 +32,15 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     flex: 1,
+  },
+  textstyles: {
+    fontSize: 30,
+    fontStyle: "italic",
+    fontWeight: "600",
+    textAlign: "center",
+    color: colors.secondary,
+    textTransform: "capitalize",
+    textDecorationLine: "underline",
   },
 });
 
