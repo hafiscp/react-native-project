@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 
-import MyAppText from "../components/MyAppText";
+import MyAppText from "../components/MyAppText/MyAppText";
 
 function AppText() {
   return (
