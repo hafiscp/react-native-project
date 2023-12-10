@@ -10,19 +10,13 @@ import AppButton from "./app/components/AppButton";
 
 export default function App() {
   return (
-    <View style={styles.view}>
-      <AppButton
-        title="Login"
-        onPress={() => {
-          console.log("Tapped");
-        }}
-      />
-    </View>
-    // <WelcomeScreen />
+    // <View style={styles.view}>
+    // </View>
     // <ViewImageScreen />
     // <BorderScreen />
     // <IconImport />
     // <AppText />
+    <WelcomeScreen />
   );
 }
 
