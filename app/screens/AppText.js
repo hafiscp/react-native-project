@@ -2,29 +2,32 @@ import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 
 import MyAppText from "../components/MyAppText/MyAppText";
+import colors from "../config/colors";
 
-function AppText() {
+function AppText({ title, subTitle }) {
   return (
-    <View style={styles.container}>
-      <MyAppText>Hello, I'm Hafis CP</MyAppText>
-      <Text style={styles.newtext}>Hello, Its another Text</Text>
+    <View style={styles.titleContainer}>
+      <Text style={styles.title}>{title}</Text>
+      <Text style={styles.subtitle}>{subTitle}</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    justifyContent: "center",
-    alignItems: "center",
-    flex: 1,
+  titleContainer: {
+    paddingTop: 10,
+    marginLeft: 20,
   },
-  newtext: {
-    color: "blue",
-    fontWeight: "600",
-    fontSize: 12,
-    backgroundColor: "yellow",
-    margin: 15,
-    padding: 20,
+  title: {
+    color: colors.black,
+    fontSize: 18,
+    paddingTop: 10,
+    paddingVertical: 5,
+  },
+  subtitle: {
+    color: colors.secondary,
+    fontWeight: "700",
+    fontSize: 18,
   },
 });
 
