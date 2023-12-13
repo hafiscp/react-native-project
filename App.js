@@ -9,16 +9,18 @@ import IconImport from "./app/screens/IconImport";
 import AppButton from "./app/components/AppButton";
 import Card from "./app/screens/Card";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
+import MessageScreen from "./app/screens/MessageScreen";
 
 export default function App() {
   return (
-    <View style={styles.ListingContainer}>
-      <ListingDetailsScreen
-        image={require("./app/assets/bg.jpg")}
-        title="Product #01"
-        subTitle="$100"
-      />
-    </View>
+    <MessageScreen />
+    // <View style={styles.ListingContainer}>
+    //   <ListingDetailsScreen
+    //     image={require("./app/assets/bg.jpg")}
+    //     title="Product #01"
+    //     subTitle="$100"
+    //   />
+    // </View>
     // <View style={styles.views}>
     //   <Card
     //     title="Mountains for Sale !"
