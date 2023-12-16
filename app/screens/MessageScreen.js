@@ -7,11 +7,9 @@ import {
   StatusBar,
   StyleSheet,
 } from "react-native";
+
 import ListItem from "../components/ListItem";
-
-import Constants from "expo-constants";
-
-console.log(Constants);
+import ListItemSeparator from "../components/ListItemSeparator";
 
 const messages = [
   {
@@ -41,6 +39,7 @@ function MessageScreen(props) {
             image={item.image}
           />
         )}
+        ItemSeparatorComponent={() => <ListItemSeparator />}
       />
     </SafeAreaView>
   );
