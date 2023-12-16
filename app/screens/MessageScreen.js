@@ -10,6 +10,7 @@ import {
 
 import ListItem from "../components/ListItem";
 import ListItemSeparator from "../components/ListItemSeparator";
+import colors from "../config/colors";
 
 const messages = [
   {
@@ -37,6 +38,7 @@ function MessageScreen(props) {
             title={item.title}
             subTitle={item.description}
             image={item.image}
+            onPress={() => console.log("Message Clicked", item.title)}
           />
         )}
         ItemSeparatorComponent={() => <ListItemSeparator />}
