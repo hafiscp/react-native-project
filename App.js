@@ -10,6 +10,7 @@ import AppButton from "./app/components/AppButton";
 import Card from "./app/screens/Card";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 import MessageScreen from "./app/screens/MessageScreen";
+import ListItemDeleteAction from "./app/components/ListItemDeleteAction";
 
 export default function App() {
   return (
