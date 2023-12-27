@@ -11,10 +11,12 @@ import Card from "./app/screens/Card";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 import MessageScreen from "./app/screens/MessageScreen";
 import ListItemDeleteAction from "./app/components/ListItemDeleteAction";
+import Screen from "./app/screens/Screen";
 
 export default function App() {
   return (
-    <MessageScreen />
+    <Screen />
+    // <MessageScreen />
     // <View style={styles.ListingContainer}>
     //   <ListingDetailsScreen
     //     image={require("./app/assets/bg.jpg")}
@@ -32,7 +34,6 @@ export default function App() {
     //     title="Mountains for Sale !"
     //     subTitle="$100"
     //     image={require("./app/assets/bg.jpg")}
-
     //   />
     // </View>
     // <ViewImageScreen />

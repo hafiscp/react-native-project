@@ -15,27 +15,16 @@ import {
 
 import colors from "../config/colors";
 
-function ListItem({
-  title,
-  subTitle,
-  image,
-  onPress,
-  renderRightActions,
-  // renderLeftActions,
-  // refreshing,
-}) {
+function ListItem({ title, subTitle, image, onPress, renderRightActions }) {
   return (
     <GestureHandlerRootView>
-      <Swipeable
-        renderRightActions={renderRightActions}
-        // renderLeftActions={renderLeftActions}
-      >
+      <Swipeable renderRightActions={renderRightActions}>
         <TouchableHighlight underlayColor={colors.light} onPress={onPress}>
           <View style={styles.ListItemContainer}>
-            <Image source={image} style={styles.image} />
+            {image && <Image source={image} style={styles.image} />}
             <View style={styles.personal}>
               <Text style={styles.title}>{title}</Text>
-              <Text style={styles.subTitle}>{subTitle}</Text>
+              {subTitle && <Text style={styles.subTitle}>{subTitle}</Text>}
             </View>
           </View>
         </TouchableHighlight>
@@ -52,13 +41,14 @@ const styles = StyleSheet.create({
     borderRadius: 35,
   },
   ListItemContainer: {
-    padding: 15,
+    // padding: 15,
     flexDirection: "row",
+    // justifyContent: "center",
+    // alignItems: "center",
     backgroundColor: colors.white,
   },
   personal: {
     justifyContent: "center",
-    alignItems: "flex-start",
     paddingHorizontal: 15,
   },
   title: {
