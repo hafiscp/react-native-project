@@ -11,6 +11,7 @@ import Card from "./app/screens/Card";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 import MessageScreen from "./app/screens/MessageScreen";
 import ListItemDeleteAction from "./app/components/ListItemDeleteAction";
+import ListItem from "./app/components/ListItem";
 import Screen from "./app/screens/Screen";
 
 export default function App() {

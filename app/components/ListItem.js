@@ -15,12 +15,20 @@ import {
 
 import colors from "../config/colors";
 
-function ListItem({ title, subTitle, image, onPress, renderRightActions }) {
+function ListItem({
+  title,
+  subTitle,
+  image,
+  ImageComponent,
+  onPress,
+  renderRightActions,
+}) {
   return (
     <GestureHandlerRootView>
       <Swipeable renderRightActions={renderRightActions}>
         <TouchableHighlight underlayColor={colors.light} onPress={onPress}>
           <View style={styles.ListItemContainer}>
+            {ImageComponent}
             {image && <Image source={image} style={styles.image} />}
             <View style={styles.personal}>
               <Text style={styles.title}>{title}</Text>
@@ -49,7 +57,8 @@ const styles = StyleSheet.create({
   },
   personal: {
     justifyContent: "center",
-    paddingHorizontal: 15,
+    // paddingHorizontal: 15,
+    marginLeft: 15,
   },
   title: {
     fontWeight: "600",
