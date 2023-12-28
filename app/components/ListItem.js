@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     borderRadius: 35,
   },
   ListItemContainer: {
-    // padding: 15,
+    padding: 10,
     flexDirection: "row",
     // justifyContent: "center",
     // alignItems: "center",
